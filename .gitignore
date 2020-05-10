@@ -104,14 +104,12 @@ venv.bak/
 .mypy_cache/
 .idea/misc.xml
 .idea/modules.xml
-.idea/python-mind.iml
+.idea/python-postcodeloterij.iml
 .idea/vcs.xml
 .idea/workspace.xml
 .vs/ProjectSettings.json
-.vs/python-mind/v15/.suo
+.vs/python-postcodeloterij/v15/.suo
 .vs/slnx.sqlite
-mind/.vs/mind/v15/.suo
-mind/.vs/slnx.sqlite
 token.txt
 test.py
 
