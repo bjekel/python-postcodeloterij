@@ -22,19 +22,17 @@ class Prize(object):
         self._imageUrl = imageUrl
 
 class PostcodeLoterij(object):
-    def __init__(self, postalCode, month, year):
+    def __init__(self, postalCode):
         self._postalCode = postalCode
-        self._month = month
-        self._year = year
 
-    def buildUrl(self):
+    def buildUrl(self, year, month):
         payload = {'postalCode': self._postalCode, 'resultSize': 1}
         params = urllib.parse.urlencode(payload)
-        url = BASE_URL + self._year + self._month + '?' + params
+        url = BASE_URL + year + month + '?' + params
         return url
 
-    def getPrizes(self):
-        response = requests.get(self.buildUrl())
+    def getPrizes(self, year, month):
+        response = requests.get(self.buildUrl(year, month))
         json = response.json()
         wonPrizesJson = json['wonprizes']
         enrichedDataJson = json['enricheddata']
